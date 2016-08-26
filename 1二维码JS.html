@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<style>
+    .nodeSmall {
+        width: 50px;
+        height: 50px;
+        background: url(images/bgs.png) no-repeat -159px -51px;
+        position: fixed;
+        right: 10px;
+        top: 40%;
+    }
+
+    .erweima {
+        position: absolute;
+        top: 0;
+        left: -150px;
+    }
+
+    .nodeSmall a {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+<div class="nodeSmall" id="node_small">
+    <a href="#"></a>
+
+    <div class="erweima hide" id="er">
+        <img src="images/456.png" alt=""/>
+    </div>
+</div>
+<script>
+    //鼠标经过盒子 显示二维码 离开盒子隐藏二维码
+    //找人
+    var node = document.getElementById("node_small");
+    var er = document.getElementById("er");
+    //经过盒子显示二维码
+    //on mouse over  on表示事件 mouse就是鼠标 over是经过的意思
+    node.onmouseover = function () {
+        //alert("鼠标经过盒子了");
+        er.className = "erweima show";
+    }
+    node.onmouseout = function () {
+        er.className = "erweima hide";
+    }
+
+</script>
+</body>
+</html>
